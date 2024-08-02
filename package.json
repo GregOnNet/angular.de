@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/symetics/angular.de/issues"
   },
-  "homepage": "https://angular.de"
+  "homepage": "https://angular.de",
+  "dependencies": {
+    "shiki": "^1.12.1"
+  }
 }

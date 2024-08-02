@@ -27,7 +27,7 @@ Da Angular vor kurzem die Control-Flow Syntax herausgebracht hat, wollte ich die
 Das sieht in etwa so aus:
 
 
-```typescript
+{% shiki javascript %}
 @Component({
   template: `<ng-template #placeholder></ng-template>`,
 })
@@ -42,7 +42,7 @@ class TypeComponent {
     this.view.createComponent(formFields[this.field.type]);
   }
 }
-```
+{% endshiki %}
 
 
 Nun, dieser Code-Teil ist bereits drei Jahre alt und ich wusste nicht, ob das hier noch eine moderne Lösung ist oder dem typischen Angular-Paradigma entspricht. Also wollte ich einen Vergleich haben zu einer anderen Methodik mit der neuen Control-Flow-Syntax: `@switch {}`. Dieser war vergleichsweise damals weitaus langsamer und komplexer zu bauen mit Typisierung.
