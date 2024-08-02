@@ -1,17 +1,18 @@
 # Angular.DE
 
 ## Build Status
+
 ![Build Status](https://github.com/workshops-de/angular.de/workflows/Build%20Jekyll%20and%20Deploy%20to%20Firebase/badge.svg?branch=master)
 
 ## Development
 
 ### 0. Prerequisite Software
 
-* [Git](http://git-scm.com) and/or the **GitHub app** (for [Mac](http://mac.github.com) or
+- [Git](http://git-scm.com) and/or the **GitHub app** (for [Mac](http://mac.github.com) or
   [Windows](http://windows.github.com)); [GitHub's Guide to Installing
   Git](https://help.github.com/articles/set-up-git) is a good source of information.
 
-* [Ruby](https://www.ruby-lang.org/en/)
+- [Ruby](https://www.ruby-lang.org/en/)
 
 ### 1. Getting the Sources
 
@@ -35,6 +36,7 @@ git remote add upstream https://github.com/workshops-de/angular.de.git
 ```
 
 ### 2. Install the project dependencies
+
 ```bash
 # install bundler as ruby package manager
 gem install bundler
@@ -42,14 +44,7 @@ gem install bundler
 bundle install
 ```
 
-### 3. Run the jekyll instance
-
-```bash
-# start the web page at http://localhost:4000
-bundle exec jekyll serve --incremental
-```
-
-## 4. Update/Pull shared module
+## 3. Update/Pull shared module
 
 We're using a git submodule to share files like templates, images and themes across all workshops_de portals. Use following command to pull and update the repository including submodule.
 
@@ -57,6 +52,20 @@ We're using a git submodule to share files like templates, images and themes acr
 $ git pull --recurse-submodules
 ```
 
+> [!Note]
+> If you load the submodule the first time you might need to execute:
+>
+> 1. `git submodule init`
+> 2. `git submodule update`
+
+### 4. Run the jekyll instance
+
+```bash
+# start the web page at http://localhost:4000
+bundle exec jekyll serve --incremental
+```
+
 ### 5. Pull Request
+
 Createa a [Pull Request](https://help.github.com/articles/creating-a-pull-request/) to describe and propose your changes to this repository.
 If you don't know what Pull Requests(PR) all about you should check out [this article](https://help.github.com/articles/about-pull-requests/).
