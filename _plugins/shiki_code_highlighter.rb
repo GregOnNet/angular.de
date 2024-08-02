@@ -10,7 +10,7 @@ module Jekyll
     def render(context)
       code = super
       output = ""
-      Open3.popen2("node", "_scripts/shiki-code-highliter.js", @lang) do |stdin, stdout, wait_thr|
+      Open3.popen2("node", "_scripts/shiki-code-highlighter.js", @lang) do |stdin, stdout, wait_thr|
         stdin.write(code)
         stdin.close
         output = stdout.read

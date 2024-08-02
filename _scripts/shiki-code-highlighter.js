@@ -1,14 +1,22 @@
-const shiki = require('shiki');
-const fs = require('fs');
+import { readFileSync } from 'fs';
+import { createHighlighter } from 'shiki';
 
 async function highlight() {
-  const highlighter = await shiki.getSingletonHighlighter({
-    theme: 'nord' // Change this to any theme Shiki supports
+  const highlighter = await createHighlighter({
+    themes: ['github-light'],
+    langs: ['javascript', 'typescript', 'angular-ts']
   });
 
-  const code = fs.readFileSync(0, 'utf-8');
+  const code = readFileSync(0, 'utf-8');
   const lang = process.argv[2] || 'plaintext';
-  console.log(highlighter.codeToHtml(code, lang));
+
+  // STDOUT is read by the ruby-plugin
+  console.log(
+    highlighter.codeToHtml(code, {
+      theme: 'github-light',
+      lang
+    })
+  );
 }
 
 highlight();

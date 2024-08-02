@@ -1,5 +1,6 @@
 {
   "name": "angular.de",
+  "type": "module",
   "version": "1.0.0",
   "description": "Requires Ruby 2.5+",
   "main": "opengraph.js",

@@ -27,9 +27,9 @@ Da Angular vor kurzem die Control-Flow Syntax herausgebracht hat, wollte ich die
 Das sieht in etwa so aus:
 
 
-{% shiki javascript %}
+{% shiki angular-ts %}
 @Component({
-  template: `<ng-template #placeholder></ng-template>`,
+  template: `<ng-template #placeholder></ng-template>`
 })
 class TypeComponent {
   @ViewChild("placeholder", { read: ViewContainerRef })
